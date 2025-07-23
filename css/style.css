@@ -1,0 +1,1026 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+/* Header */
+.header {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #f8f9fa;
+    border-bottom: 1px solid #ddd;
+}
+
+.brand {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: #333;
+    font-size: 1rem;
+}
+
+.user-actions {
+    display: flex;
+    gap: 10px;
+}
+
+/* Main Content */
+.main-content {
+    padding: 20px;
+}
+
+/* Table Responsiveness */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    font-size: 16px;
+    overflow-x: auto; /* Allows horizontal scrolling on small screens */
+}
+
+table th, table td {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+table th {
+    background-color: #f8f9fa;
+    font-weight: 600;
+    color: #333;
+}
+
+/* Card-Based Layout */
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px;
+}
+
+.card {
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%; /* Full width on mobile */
+    padding: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.card h3 {
+    margin: 0 0 10px;
+    font-size: 18px;
+    color: #333;
+}
+
+.card p {
+    margin: 5px 0;
+    font-size: 14px;
+    color: #555;
+}
+
+/* Status Badges */
+.status {
+    display: inline-block;
+    padding: 5px 10px;
+    border-radius: 12px;
+    font-size: 12px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.status-open {
+    background-color: #28a745;
+    color: white;
+}
+
+.status-closed {
+    background-color: #dc3545;
+    color: white;
+}
+
+/* File Link Styling */
+.file-link {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.file-link:hover {
+    text-decoration: underline;
+}
+
+/* Media Queries for Mobile Responsiveness */
+@media (max-width: 768px) {
+    /* Header */
+    .header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .nav {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    /* Table */
+    table {
+        display: block;
+        overflow-x: auto;
+    }
+
+    /* Cards */
+    .card {
+        width: 100%; /* Full width on mobile */
+    }
+}
+
+@media (max-width: 480px) {
+    /* Adjust font sizes for smaller screens */
+    body {
+        font-size: 14px;
+    }
+
+    .brand {
+        font-size: 1.2rem;
+    }
+
+    .nav-link {
+        font-size: 0.9rem;
+    }
+
+    /* Cards */
+    .card h3 {
+        font-size: 16px;
+    }
+
+    .card p {
+        font-size: 12px;
+    }
+}
+
+
+
+/*User- Header Styles */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #003366;
+    padding: 10px 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+}
+
+/* Brand Section */
+.brand .navbar-brand {
+    color: #ecf0f1;
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+}
+
+.brand .navbar-brand i {
+    margin-right: 10px;
+}
+
+/* Navigation Links */
+.nav {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.nav-link {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: #ecf0f1;
+    text-decoration: none;
+    padding: 8px 12px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.nav-link:hover, .nav-link.active {
+    background-color: #34495e;
+    border-bottom: 3px solid #1abc9c;
+}
+
+.nav-link i {
+    font-size: 1.2rem;
+}
+
+/* Logout Button */
+.user-actions .logout-btn {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background-color: #4e6e88;
+    color: #ecf0f1;
+    padding: 8px 12px;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.user-actions .logout-btn:hover {
+    background-color: #FF69B4;
+}
+
+
+/* Profile Container */
+.profile-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Profile Card */
+.profile-card {
+    text-align: center;
+}
+
+/* Profile Header */
+.profile-header {
+    margin-bottom: 20px;
+}
+
+.profile-header .profile-icon {
+    font-size: 60px;
+    color: #2c3e50;
+}
+
+.profile-header h3 {
+    margin: 10px 0 5px;
+    font-size: 20px;
+    color: #2c3e50;
+}
+
+.profile-header p {
+    color: #7f8c8d;
+    font-size: 16px;
+}
+
+/* Profile Details */
+.profile-details {
+    text-align: left;
+}
+
+.detail-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+    font-size: 14px;
+}
+
+.detail-item i {
+    margin-right: 10px;
+    color: #2c3e50;
+    width: 20px;
+    text-align: center;
+}
+
+.detail-item span {
+    color: #34495e;
+}
+
+/* Edit Profile Button */
+.btn {
+    background-color: #003366;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #34495e;
+}
+
+/* Modal Styles */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    z-index: 1000; /* Ensure it appears above other content */
+    justify-content: center;
+    align-items: center;
+}
+
+.modal.show {
+    display: flex; /* Show the modal when the 'show' class is added */
+}
+
+.modal-content {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    width: 90%;
+    max-width: 400px; /* Adjusted form size */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 10px;
+    margin-bottom: 15px; /* Reduced margin */
+}
+
+.modal-title {
+    margin: 0;
+    font-size: 18px; /* Slightly smaller title */
+    color: #2c3e50;
+}
+
+.close {
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: #888;
+}
+
+.close:hover {
+    color: #333;
+}
+
+/* Form Group Styles */
+.modal-body .form-group {
+    margin-bottom: 5px; /* Reduced gap between form groups */
+}
+
+.modal-body .form-group label {
+    display: block;
+    margin-bottom: 0px; /* Reduced gap between label and input */
+    font-weight: bold;
+    color: #2c3e50;
+    font-size: 14px; /* Smaller label font size */
+}
+
+.modal-body .form-group input {
+    width: 100%;
+    padding: 6px; /* Smaller padding */
+    border: 0.5px solid #ddd;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+.modal-body .form-group input:focus {
+    border-color: #1abc9c;
+    outline: none;
+}
+
+/* Submit Button */
+.modal-body .btn {
+    background-color: #1abc9c;
+    color: #fff;
+    padding: 8px 16px; /* Smaller button padding */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s ease;
+    margin-top: 10px; /* Added margin to the button */
+}
+
+.modal-body .btn:hover {
+    background-color: #16a085;
+}
+
+
+/* User ticket - Modern Table Styling */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+table th, table td {
+    padding: 12px 15px;
+    text-align: left;
+}
+
+table th {
+    background-color: #2c3e50;
+    color: #fff;
+    font-weight: bold;
+}
+
+table tr:nth-child(even) {
+    background-color: #f8f9fa;
+}
+
+table tr:hover {
+    background-color: #e9ecef;
+}
+
+table td a {
+    color: #1abc9c;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+table td a:hover {
+    color: #16a085;
+}
+
+/* Status Highlight */
+.status-open {
+    color: #27ae60;
+    font-weight: bold;
+}
+
+.status-closed {
+    color: #e74c3c;
+    font-weight: bold;
+}
+
+/* Main Content Styling */
+.main-content {
+    padding: 20px;
+    background-color: #f8f9fa;
+    border-radius: 10px;
+    margin: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.content h4 {
+    color: #2c3e50;
+    margin-bottom: 20px;
+}
+
+.content p {
+    color: #34495e;
+    margin-bottom: 20px;
+}
+
+
+
+        /*Order- Card styling for orders */
+        .order-card {
+            background: #fff;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .order-card h3 {
+            margin-top: 0;
+            color: #007bff;
+        }
+
+        .order-card img {
+            width: 80px;
+            height: 80px;
+            object-fit: cover;
+            border-radius: 5px;
+            margin-right: 15px;
+        }
+
+        .order-card .product-info {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+
+        .order-card .product-info h4 {
+            margin: 0;
+            font-size: 18px;
+        }
+
+        .order-card .details {
+            margin-bottom: 15px;
+        }
+
+        .order-card .details p {
+            margin: 5px 0;
+        }
+
+        .order-card .status {
+            font-weight: bold;
+        }
+
+        .order-card .status-pending { color: orange; }
+        .order-card .status-confirmed { color: green; }
+        .order-card .status-delivered { color: blue; }
+
+        .order-card .actions {
+            display: flex;
+            gap: 10px;
+        }
+
+        .order-card .actions a {
+            color: #007bff;
+            text-decoration: none;
+            font-size: 18px;
+        }
+
+        .order-card .actions a:hover {
+            color: #0056b3;
+        }
+
+        /* Feedback modal styling */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            padding-top: 60px;
+        }
+
+        .modal-content {
+            background-color: #fff;
+            margin: 5% auto;
+            padding: 20px;
+            border: 1px solid #ddd;
+            width: 50%;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+        }
+
+        .modal-content h2 {
+            margin-top: 0;
+        }
+
+        .modal-content label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .modal-content input, .modal-content textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+
+        .modal-content button {
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .modal-content button:hover {
+            background-color: #0056b3;
+        }
+
+        .close {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .close:hover {
+            color: black;
+        }
+
+        /* Delivery details modal styling */
+        .delivery-details-modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            padding-top: 60px;
+        }
+
+        .delivery-details-modal .modal-content {
+            background-color: #fff;
+            margin: 5% auto;
+            padding: 20px;
+            border: 1px solid #ddd;
+            width: 50%;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+        }
+
+        .delivery-details-modal .modal-content h2 {
+            margin-top: 0;
+        }
+
+        .delivery-details-modal .modal-content p {
+            margin: 5px 0;
+        }
+
+        /* Delivery progress bar */
+        .delivery-progress {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 20px;
+        }
+
+        .delivery-progress .step {
+            flex: 1;
+            text-align: center;
+            position: relative;
+        }
+
+        .delivery-progress .step:not(:last-child)::after {
+            content: '';
+            position: absolute;
+            top: 20px;
+            left: 50%;
+            width: 100%;
+            height: 2px;
+            background-color: #ddd;
+            z-index: -1;
+        }
+
+        .delivery-progress .step.active::after {
+            background-color: #007bff;
+        }
+
+        .delivery-progress .step.active .icon {
+            background-color: #007bff;
+            color: #fff;
+        }
+
+        .delivery-progress .step .icon {
+            background-color: #ddd;
+            color: #000;
+            width: 40px;
+            height: 40px;
+            line-height: 40px;
+            border-radius: 50%;
+            margin: 0 auto 10px;
+        }
+
+        /* Star rating styling */
+        .star-rating {
+            display: flex;
+            gap: 5px;
+            margin-bottom: 15px;
+        }
+
+        .star-rating .star {
+            cursor: pointer;
+            font-size: 24px;
+            color: #ddd;
+        }
+
+        .star-rating .star.active {
+            color: #ffcc00;
+        }
+
+
+                /* Modal Styles */
+                .modal {
+                    display: none;
+                    position: fixed;
+                    z-index: 1000;
+                    left: 0;
+                    top: 0;
+                    width: 100%;
+                    height: 100%;
+                    background-color: rgba(0, 0, 0, 0.5);
+                    justify-content: center;
+                    align-items: center;
+                }
+        
+                .modal-content {
+                    background-color: #fff;
+                    padding: 20px;
+                    border-radius: 10px;
+                    width: 80%;
+                    max-width: 600px;
+                    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+                }
+        
+                .modal-header {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    border-bottom: 1px solid #ddd;
+                    padding-bottom: 10px;
+                    margin-bottom: 20px;
+                }
+        
+                .modal-header h4 {
+                    margin: 0;
+                    font-size: 1.5rem;
+                }
+        
+                .modal-header .close-icon {
+                    cursor: pointer;
+                    font-size: 1.5rem;
+                    color: #888;
+                }
+        
+                .modal-header .close-icon:hover {
+                    color: #000;
+                }
+        
+                .modal-body table {
+                    width: 100%;
+                    border-collapse: collapse;
+                }
+        
+                .modal-body th,
+                .modal-body td {
+                    padding: 10px;
+                    text-align: left;
+                    border-bottom: 1px solid #ddd;
+                }
+        
+                .modal-body th {
+                    background-color: #003366;
+                    font-weight: bold;
+                }
+        
+                .action-icons .fa-eye {
+                    cursor: pointer;
+                    color: #007bff;
+                }
+        
+                .action-icons .fa-eye:hover {
+                    color: #0056b3;
+                } 
+
+                        /* Card-Based Layout */
+        .card-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            padding: 20px;
+        }
+
+        .card {
+            background: #fff;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 300px;
+            padding: 20px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+
+        .card h3 {
+            margin: 0 0 10px;
+            font-size: 18px;
+            color: #333;
+        }
+
+        .card p {
+            margin: 5px 0;
+            font-size: 14px;
+            color: #555;
+        }
+
+        .card .status {
+            display: inline-block;
+            padding: 5px 10px;
+            border-radius: 12px;
+            font-size: 12px;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+
+        .card .status-open {
+            background-color: #28a745;
+            color: white;
+        }
+
+        .card .status-closed {
+            background-color: #dc3545;
+            color: white;
+        }
+
+        .card .file-link {
+            color: #007bff;
+            text-decoration: none;
+        }
+
+        .card .file-link:hover {
+            text-decoration: underline;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .card {
+                max-width: 100%;
+            }
+        }
+
+
+        /* Processing Message Styles */
+.processing-message {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.processing-content {
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.processing-content p {
+    margin-bottom: 15px;
+    font-size: 18px;
+    color: #333;
+}
+
+.spinner {
+    border: 4px solid #f3f3f3;
+    border-top: 4px solid #3498db;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    animation: spin 1s linear infinite;
+    margin: 0 auto;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+      /* Additional CSS for spacing and design */
+      .header-section {
+        background: linear-gradient(135deg, #003366,rgb(255, 255, 255));
+        color: #fff;
+        padding: 60px 20px;
+        text-align: center;
+        margin-bottom: 40px;
+    }
+    .header-section h1 {
+        font-size: 2.5rem;
+        margin-bottom: 10px;
+    }
+    .header-section p {
+        font-size: 1.2rem;
+        color: #ddd;
+    }
+    .repair-booking {
+        padding: 20px;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+    .booking-form-container {
+        background: #f9f9f9;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        margin-bottom: 40px;
+    }
+    .styled-form label {
+        font-weight: 600;
+        margin-bottom: 5px;
+        display: block;
+        font-size: 0.9rem;
+    }
+    .styled-form input,
+    .styled-form select,
+    .styled-form textarea {
+        width: 100%;
+        padding: 8px;
+        margin-bottom: 15px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        font-size: 0.9rem;
+    }
+    .styled-form textarea {
+        resize: vertical;
+        height: 80px;
+    }
+    .styled-form button {
+        background: #4e6e88;
+        color: #fff;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 0.9rem;
+        transition: background 0.3s;
+    }
+    .styled-form button:hover {
+        background: #2d3a49;
+    }
+    .form-row {
+        display: flex;
+        gap: 15px;
+    }
+    .form-group {
+        flex: 1;
+    }
+    .repair-services {
+        background: #f9f9f9;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        margin-bottom: 40px;
+    }
+    .service-list {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+    .service-item {
+        background: #fff;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        flex: 1 1 calc(33.333% - 40px);
+        text-align: center;
+    }
+    .service-item h3 {
+        font-size: 1.5rem;
+        margin-bottom: 10px;
+    }
+    .service-item p {
+        color: #555;
+        margin-bottom: 15px;
+    }
+    .service-item .price {
+        font-weight: 600;
+        color: #4e6e88;
+        margin-bottom: 15px;
+    }
+    .btn-service {
+        background: #003366;
+        color: #fff;
+        padding: 8px 16px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background 0.3s;
+    }
+    .btn-service:hover {
+        background: #3f51b5;
+    }
